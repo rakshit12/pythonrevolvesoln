@@ -1,6 +1,9 @@
 # Revolve Solutions Data Test - Starter Project
 
 ## I have made my own code which is under mysolution/solution_start.py
+please refer that solution
+## Output of solution is stored in JSON format in output_data/outputs
+all the data is weekly stored
 
 ### Prerequisites
 #### Java JDK 8
