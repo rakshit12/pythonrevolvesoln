@@ -4,7 +4,7 @@ import pandas as pd
 
 #This Function is to get the folder name of each json file in transactions folder e.g d=2018-12-01
 # this will return a nested list divided weekly 
-# func will return list [["d=2018-12-01","d=2018-12-02","d=2018-12-03","d=2018-12-04","d=2018-12-05",
+# function will return list [["d=2018-12-01","d=2018-12-02","d=2018-12-03","d=2018-12-04","d=2018-12-05",
 # "d=2018-12-06","d=2018-12-01"],[...]]
 def getfile_path(filepath):
     all_files=[]  #intializing to append all week list inside it
@@ -31,8 +31,8 @@ def makeDataFrame_by_week(r,indx):
             data=data.append(data2)
     data["purchase_count"]=data["basket"].apply(len) #this is to add the purchase count column by calculating no. of orders inside a basket which len(basket)
     return data
-# This Data frame will have customer_id,basket(which is a dic column containg prducts),date f purchase,purchase_count
-# Now we have a week wise datafram we will have only those columns which we require and return a ew dataframe
+# This Data frame will have customer_id,basket(which is a dictionary column containg prducts),date of purchase,purchase_count
+# Now we have a week wise dataframe we will have only those columns which we require and return a new dataframe
 def per_processing(df):
     new=pd.DataFrame(columns = ['customer_id', 'product_id', "purchase_count"])
     cnt=0
@@ -42,7 +42,7 @@ def per_processing(df):
             new.loc[cnt]=p
             cnt+=1
     return new
-# this data frame will have customer_id,product_id (this we get from the basket dictonary),purchase_count
+# this dataframe will have customer_id,product_id (this we get from the basket dictonary),purchase_count
     
 
 
